@@ -67,6 +67,6 @@ io.on("connection", (socket) => {
   //io.emit() it will emit to everybody
 });
 
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 server.listen(PORT, () => console.log(`server started ${PORT}`));
