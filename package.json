@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "real time chatbox",
   "main": "server.js",
+  "engines": {
+    "node": "14.15.0",
+    "npm":"7.21.0"
+  },
   "scripts": {
-    "start": "node server",
+    "start": "node chatRoom.js",
     "dev":"nodemon server"
   },
   "author": "Aditya",
