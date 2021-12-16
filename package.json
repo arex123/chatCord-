@@ -2,7 +2,7 @@
   "name": "chadbox",
   "version": "1.0.0",
   "description": "real time chatbox",
-  "main": "server.js",
+  "main": "chatRoom.js",
   "engines": {
     "node": "14.15.0",
     "npm":"7.21.0"
