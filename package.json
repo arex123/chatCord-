@@ -2,13 +2,13 @@
   "name": "chadbox",
   "version": "1.0.0",
   "description": "real time chatbox",
-  "main": "chatRoom.js",
+  "main": "index.js",
   "engines": {
     "node": "14.15.0",
     "npm":"7.21.0"
   },
   "scripts": {
-    "start": "node chatRoom.js",
+    "start": "node index.js",
     "dev":"nodemon server"
   },
   "author": "Aditya",
