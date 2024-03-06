@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev":"nodemon server"
+    "dev":"nodemon server",
+    "build":"webpack --prod"
   },
   "author": "Aditya",
   "license": "MIT",
