@@ -9,8 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon server",
-    "build": "webpack --mode production"
+    "dev": "nodemon server"
   },
   "author": "Aditya",
   "license": "MIT",
