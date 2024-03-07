@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon server",
-    "build": "webpack --prod"
+    "build": "webpack --mode production"
   },
   "author": "Aditya",
   "license": "MIT",
