@@ -4,7 +4,7 @@
   "description": "real time chatbox",
   "main": "index.js",
   "engines": {
-    "node": "14.15.0",
+    "node": "20.x",
     "npm": "7.21.0"
   },
   "scripts": {
