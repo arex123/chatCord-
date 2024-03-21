@@ -1,7 +1,9 @@
 const express = require("express");
+const app = express();
 const path = require("path");
-const http = require("http");
+const serv = require("http").createServer(app);
 const socketio = require("socket.io");
+const io = socketio(serv);
 const formatMessage = require("./util/message");
 
 const {
@@ -11,12 +13,7 @@ const {
   getRoomUsers,
 } = require("./util/users");
 
-const app = express();
-const server = http.createServer(app);
-// const io = socketio(server);
-const io = new socketio.Server(server,{
-  origin:"*"
-})
+// const server = http.createServer(app);
 
 app.use(express.static(path.join(__dirname, "public")));
 const bot = "chadbox bot";
@@ -72,4 +69,4 @@ io.on("connection", (socket) => {
 
 const PORT = process.env.PORT || 3000;
 
-server.listen(PORT, () => console.log(`server started ${PORT}`));
+serv.listen(PORT, () => console.log(`server started ${PORT}`));
