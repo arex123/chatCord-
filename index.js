@@ -1,9 +1,7 @@
 const express = require("express");
-const app = express();
 const path = require("path");
-const serv = require("http").createServer(app);
-const socketio = require("socket.io");
-const io = socketio(serv);
+// const http = require("http");
+// const socketio = require("socket.io");
 const formatMessage = require("./util/message");
 
 const {
@@ -13,7 +11,15 @@ const {
   getRoomUsers,
 } = require("./util/users");
 
-// const server = http.createServer(app);
+const app = express();
+var socket = require('socket.io')
+
+
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, () => console.log(`server started ${PORT}`));
+
+
+const io = socket(server);
 
 app.use(express.static(path.join(__dirname, "public")));
 const bot = "chadbox bot";
@@ -66,7 +72,3 @@ io.on("connection", (socket) => {
 
   //io.emit() it will emit to everybody
 });
-
-const PORT = process.env.PORT || 3000;
-
-serv.listen(PORT, () => console.log(`server started ${PORT}`));
