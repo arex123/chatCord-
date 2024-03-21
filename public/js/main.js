@@ -13,8 +13,8 @@ const {username,room}=Qs.parse(location.search,{
 //console.log(username,room);
 
 
-// const socket=io("http://localhost:3000/");
-const socket=io("http://chat-cord-two.vercel.app/");
+const socket=io();
+// const socket=io("https://chat-cord-two.vercel.app/");
 
 
 socket.emit('joinRoom',{username,room});

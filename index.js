@@ -10,13 +10,15 @@ const {
 } = require("./util/users");
 
 const app = express();
-var socket = require('socket.io')
+var {Server} = require('socket.io')
 
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => console.log(`server started ${PORT}`));
 
-const io = socket(server);
+// const io = socket(server);
+const io = new Server(server);
+
 
 app.use(express.static(path.join(__dirname, "public")));
 const bot = "chadbox bot";
