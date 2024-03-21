@@ -14,7 +14,7 @@ const {username,room}=Qs.parse(location.search,{
 
 
 // const socket=io("http://localhost:3000/");
-const socket=io("https://chat-cord-two.vercel.app/");
+const socket=io("http://chat-cord-two.vercel.app/");
 
 
 socket.emit('joinRoom',{username,room});
