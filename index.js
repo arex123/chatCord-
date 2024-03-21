@@ -13,7 +13,7 @@ const app = express();
 var {Server} = require('socket.io')
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 const server = app.listen(PORT, () => console.log(`server started ${PORT}`));
 
 // const io = socket(server);
@@ -25,7 +25,8 @@ const bot = "chadbox bot";
 
 
 io.on("connection", (socket) => {
-  //first code-> // console.log('New WS connection...');
+  // first code-> 
+  console.log('New WS connection...');
 
   socket.on("joinRoom", ({ username, room }) => {
     const user = userJoin(socket.id, username, room);
