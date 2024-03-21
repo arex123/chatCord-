@@ -13,7 +13,10 @@ const {
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+// const io = socketio(server);
+const io = new socketio.Server(server,{
+  origin:"*"
+})
 
 app.use(express.static(path.join(__dirname, "public")));
 const bot = "chadbox bot";
